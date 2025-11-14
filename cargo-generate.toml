@@ -1,0 +1,25 @@
+[template]
+# 模板的描述，会在用户选择时显示
+description = "一个专业的Rust项目模板"
+# 需要包含在模板中的文件和目录
+include = ["src/**", "Cargo.toml", ".github/**", "README.md"]
+# 需要排除的文件和目录
+exclude = ["target/", "Cargo.lock"]
+
+# # 定义模板变量和交互提示
+# [variables]
+# # 这些变量会在生成过程中向用户询问
+# name = { type = "string", prompt = "请输入项目名称" }
+# description = { type = "string", prompt = "请输入项目描述" }
+# author = { type = "string", prompt = "请输入作者姓名" }
+
+# 设置变量的默认值(自定义占位符)
+[placeholders]
+crate_name = { prompt = "请输入项目名称", default = "my_project",type = "string" }
+description = { type = "string", prompt = "请输入项目描述", default = "一个用Rust编写的新项目" }
+author = { type = "string", prompt = "请输入作者姓名", default = "{{authors}}" }
+
+# # 条件文件生成（高级功能）
+# [conditions]
+# "with-docs" = { files = [ "docs/**" ] }
+# "with-examples" = { files = [ "examples/**" ] }

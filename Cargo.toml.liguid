@@ -1,0 +1,12 @@
+[package]
+name = "{{crate_name}}"  # 项目名称会被替换，使用占位符（来源于cargo-generate.toml的[placeholders]自定义占位符）
+version = "0.1.0"
+description = "{{description}}"
+authors = ["{{authors}}"]
+edition = "2024"
+
+# # 依赖也可以条件化
+# {% if with-serde %}
+# [dependencies]
+# serde = { version = "1.0", features = ["derive"] }
+# {% endif %}
